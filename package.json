@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "koishi": "^3.11.2",
+    "koishi-adapter-onebot": "^3.0.9",
+    "koishi-plugin-mysql": "^3.3.2",
+    "koishi-plugin-common": "^4.2.6",
+    "koishi-plugin-webui": "^4.6.1"
+  }
+}
