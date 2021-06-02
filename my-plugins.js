@@ -1,9 +1,7 @@
-module.exports = (ctx) => {
-    ctx.middleware((session, next) => {
-        if (session.content === 'psvm') {
-            session.send('public static void Main')
-        }
+const pluginJava = require('./java');
+const pluginAlpha = require('./alpha');
 
-        return next()
-    })
+module.exports = (ctx) => {
+    ctx.plugin(pluginJava);
+    ctx.plugin(pluginAlpha);
 }
