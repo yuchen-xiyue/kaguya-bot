@@ -1,6 +1,4 @@
 
-
-
 module.exports.apply = (ctx) => {
     const WolframAlpha = require('wolfram-alpha-api');
     const waApi = WolframAlpha('VXUG2K-3HA2HTXKV9');
