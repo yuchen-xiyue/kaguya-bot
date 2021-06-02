@@ -26,5 +26,6 @@ module.exports = {
         common: {},
         webui: {},
         './my-plugins': {},
+
     },
 }

@@ -1,9 +1,4 @@
-import {segment} from "koishi-utils";
-
-const WolframAlphaAPI = require('wolfram-alpha-api');
-const waApi = WolframAlphaAPI('VXUG2K-3HA2HTXKV9');
-
-module.exports.name = 'wolfram-alpha';
+const waApi = WolframAlpha('VXUG2K-3HA2HTXKV9');
 
 module.exports.apply = (ctx) => {
     ctx.command('alpha <query>')
