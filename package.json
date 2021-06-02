@@ -5,5 +5,8 @@
     "koishi-plugin-mysql": "^3.3.2",
     "koishi-plugin-common": "^4.2.6",
     "koishi-plugin-webui": "^4.6.1"
+  },
+  "scripts": {
+    "cqhttp": "cd cqhttp && ./go-cqhttp"
   }
 }
