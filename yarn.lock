@@ -272,6 +272,15 @@ co@^4.6.0:
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
   integrity sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
 
+common-api@0.0.x:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/common-api/-/common-api-0.0.10.tgz#95bc808c1425f50db1bb3e48418a72ea13380e93"
+  integrity sha1-lbyAjBQl9Q2xuz5IQYpy6hM4DpM=
+  dependencies:
+    csv "0.2.x"
+    q "0.8.x"
+    xml2object "0.1.x"
+
 content-disposition@~0.5.2:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/content-disposition/-/content-disposition-0.5.3.tgz#e130caf7e7279087c5616c2007d0485698984fbd"
@@ -301,6 +310,11 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+
+csv@0.2.x:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/csv/-/csv-0.2.9.tgz#52d16e7ec2d61971211bf326f49a8294efb65f16"
+  integrity sha1-UtFufsLWGXEhG/Mm9JqClO+2XxY=
 
 debug@^4.1.1:
   version "4.3.1"
@@ -756,6 +770,11 @@ prompts@^2.4.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
+q@0.8.x:
+  version "0.8.12"
+  resolved "https://registry.yarnpkg.com/q/-/q-0.8.12.tgz#9162a91e11819c4bcda7da15cf5fefaad0778823"
+  integrity sha1-kWKpHhGBnEvNp9oVz1/vqtB3iCM=
+
 qface@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/qface/-/qface-1.1.0.tgz#63643ea11baf96ae40243c3b788d95ad861a3592"
@@ -807,6 +826,11 @@ safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+
+sax@>=0.3.5:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+  integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
 semver@^7.3.5:
   version "7.3.5"
@@ -908,10 +932,25 @@ vary@^1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
+wolfram-alpha-api@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/wolfram-alpha-api/-/wolfram-alpha-api-0.2.1.tgz#f3fffb0b43693a77d0469f8f798569eb2c40ca3d"
+  integrity sha1-8//7C0NpOnfQRp+PeYVp6yxAyj0=
+  dependencies:
+    common-api "0.0.x"
+    q "0.8.x"
+
 ws@^7.4.5:
   version "7.4.6"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.6.tgz#5654ca8ecdeee47c33a9a4bf6d28e2be2980377c"
   integrity sha512-YmhHDO4MzaDLB+M9ym/mDA5z0naX8j7SIlT8f8z+I0VtzsRbekxEutHSme7NPS2qE8StCYQNUnfWdXta/Yu85A==
+
+xml2object@0.1.x:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/xml2object/-/xml2object-0.1.2.tgz#872964288e8181a50fdd44f7891097fe5c982b45"
+  integrity sha1-hylkKI6BgaUP3UT3iRCX/lyYK0U=
+  dependencies:
+    sax ">=0.3.5"
 
 yallist@^4.0.0:
   version "4.0.0"
