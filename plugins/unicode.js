@@ -8,10 +8,7 @@ module.exports = (ctx) => {
 
     ctx.command('unicode <s:text>')
         .action((_, s) => {
-            if (s.length === 1) {
-                return s.charCodeAt(0);
-            }
-            else if (s.length > 1) {
+            if (s.length >= 1) {
                 return s.split('').map((ch)=>('0000'+ch.charCodeAt(0)).slice(-4)).join(' ');
             }
             else {
