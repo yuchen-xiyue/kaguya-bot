@@ -3,7 +3,8 @@ module.exports = (ctx) => {
     const { segment } = require('koishi-utils')
     const alphaId = 'VXUG2K-3HA2HTXKV9';
 
-    ctx.command('alpha <query>').option('debug', '-d')
+    ctx.command('alpha <query>')
+        .option('debug', '-d', { fallback: true })
         .action((_, query, debug) => {
 
             let msg = 'AlphaNoResponseException!';
@@ -18,6 +19,7 @@ module.exports = (ctx) => {
                 query
             ).then(
                 (qr) => {
+                    if (debug) msg += 'Wolfram Alpha answer received...\n';
                     const pods = qr.pods;
                     const output = pods.map((pod) => {
                         const subpodContent = pod.subpods.map(subpod =>
