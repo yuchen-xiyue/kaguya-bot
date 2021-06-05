@@ -1,6 +1,6 @@
-
 module.exports = (ctx) => {
     const WolframAlpha = require('wolfram-alpha-api');
+    const { segment } = require('koishi-utils')
     const alphaId = 'VXUG2K-3HA2HTXKV9';
 
     ctx.command('alpha <query>')
@@ -15,7 +15,7 @@ module.exports = (ctx) => {
                     const pods = qr.pods;
                     const output = pods.map((pod) => {
                         const subpodContent = pod.subpods.map(subpod =>
-                            segment('image', { url: subpod.img.src })
+                            segment('image', {url: subpod.img.src})
                         );
                         return pod.title + subpodContent;
                     }).join('\n');
@@ -26,12 +26,6 @@ module.exports = (ctx) => {
                     msg = 'AlphaNoResultException!';
                 }
             );
-
             return msg;
         })
-
-    ctx.command('unicode <code>')
-        .action((_, code) => String.fromCharCode(code));
-
-
-}
+};

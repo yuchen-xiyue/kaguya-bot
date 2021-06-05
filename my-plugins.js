@@ -1,7 +1,5 @@
-const pluginJava = require('./java');
-const pluginAlpha = require('./alpha');
+const pluginAlpha = require('./plugins/alpha');
 
 module.exports = (ctx) => {
-    ctx.plugin(pluginJava);
     ctx.plugin(pluginAlpha);
 }
