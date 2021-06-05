@@ -1,5 +1,5 @@
 
-module.exports.apply = (ctx) => {
+module.exports = (ctx) => {
     const WolframAlpha = require('wolfram-alpha-api');
     const waApi = WolframAlpha('VXUG2K-3HA2HTXKV9');
     ctx.command('alpha <query>')
