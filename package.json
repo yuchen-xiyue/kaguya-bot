@@ -6,6 +6,7 @@
     "koishi-plugin-mysql": "^3.3.2",
     "koishi-plugin-webui": "^4.6.1",
     "koishi-utils": "latest",
+    "mathjax": "^3.1.4",
     "wolfram-alpha-api": "https://products.wolframalpha.com/api/libraries/javascript/wolfram-alpha-api-1.0.0-rc.1.tgz"
   },
   "scripts": {

@@ -40,7 +40,7 @@ module.exports = (ctx) => {
             ).catch(
                 (e) => {
                     if (debug) {
-                        msg += 'Query completed and no result found...\n';
+                        msg += e;
                     }
                     else {
                         msg = 'AlphaNoResultException!';
