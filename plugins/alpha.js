@@ -3,10 +3,16 @@ module.exports = (ctx) => {
     const { segment } = require('koishi-utils')
     const alphaId = 'VXUG2K-3HA2HTXKV9';
 
-    ctx.command('alpha <query>')
-        .action((_, query) => {
+    ctx.command('alpha <query>').option('debug', '-d')
+        .action((_, query, debug) => {
+
             let msg = 'AlphaNoResponseException!';
+
+            if (debug) msg = 'Run as debug mode...\n';
+
             let waApi = WolframAlpha(alphaId);
+
+            if (debug) msg += 'Wolfram Alpha initiated...\n';
 
             waApi.getFull(
                 query
@@ -18,12 +24,25 @@ module.exports = (ctx) => {
                             segment('image', {url: subpod.img.src})
                         );
                         return pod.title + subpodContent;
-                    }).join('\n');
-                    msg = output;
+                    });
+
+                    if (debug) {
+                        msg += 'Query completed! Result: \n';
+                        msg += output;
+                    }
+                    else {
+                        msg = output;
+                    }
+
                 }
             ).catch(
                 (e) => {
-                    msg = 'AlphaNoResultException!';
+                    if (debug) {
+                        msg += 'Query completed and no result found...\n';
+                    }
+                    else {
+                        msg = 'AlphaNoResultException!';
+                    }
                 }
             );
             return msg;
