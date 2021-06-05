@@ -12,12 +12,12 @@ module.exports = (ctx) => {
                 return s.charCodeAt(0);
             }
             else if (s.length > 1) {
-                return s.split('').forEach((ch)=>('0000'+ch.charCodeAt(0)).slice(-4)).join(' ');
+                return s.split('').map((ch)=>('0000'+ch.charCodeAt(0)).slice(-4)).join(' ');
             }
             else {
                 return '请输入文字内容哦';
             }
         });
 
-}
+};
 
