@@ -14,6 +14,7 @@ module.exports = {
         selfId: '827901313',
         token: '',
     }],
+    prefix: ['--', '.'],
     plugins: {
         mysql: {
             host: '172.21.0.16',

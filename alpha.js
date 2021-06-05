@@ -13,7 +13,7 @@ module.exports = (ctx) => {
                         const subpodContent = pod.subpods.map(subpod =>
                             segment('image', { url: subpod.img.src })
                         );
-                        return `${pod.title}\n${subpodContent}`;
+                        return pod.title+subpodContent;
                     }).join('\n');
                     // console.log(output);
                     return output;
@@ -24,4 +24,7 @@ module.exports = (ctx) => {
                 }
             );
         })
+
+    ctx.command('unicode <code>')
+        .action((_, code) => String.fromCharCode(code))
 }
