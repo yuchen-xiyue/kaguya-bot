@@ -4,6 +4,7 @@ module.exports = (ctx) => {
     const waApi = WolframAlpha('VXUG2K-3HA2HTXKV9');
     ctx.command('alpha <query>')
         .action((_, query) => {
+            let msg = 'AlphaNoResponseException';
             waApi.getFull(
                 query
             ).then(
@@ -16,11 +17,11 @@ module.exports = (ctx) => {
                         return pod.title+subpodContent;
                     }).join('\n');
                     // console.log(output);
-                    return output;
+                    msg = output;
                 }
             ).catch(
                 (e) => {
-                    return `No answer found! `;
+                    msg = `AlphaNoResultException!`;
                 }
             );
         })
