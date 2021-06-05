@@ -10,7 +10,7 @@ module.exports = (ctx) => {
         .action((_, s) => {
 
             if (s.length >= 1) {
-                return s.split('').map((ch)=>('0000'+ch.charCodeAt(0)).slice(-4)).join(' ');
+                return s.split('').map((ch)=>('00000000'+ch.charCodeAt(0)).slice(-8)).join(' ');
             }
             else {
                 return '请输入文字内容哦';
