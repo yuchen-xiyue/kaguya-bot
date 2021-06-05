@@ -1,11 +1,13 @@
 
 module.exports = (ctx) => {
     const WolframAlpha = require('wolfram-alpha-api');
-    const waApi = WolframAlpha('VXUG2K-3HA2HTXKV9');
+    const alphaId = 'VXUG2K-3HA2HTXKV9';
 
     ctx.command('alpha <query>')
         .action((_, query) => {
-            let msg = 'AlphaNoResponseException';
+            let msg = 'AlphaNoResponseException!';
+            let waApi = WolframAlpha(alphaId);
+
             waApi.getFull(
                 query
             ).then(
@@ -15,18 +17,17 @@ module.exports = (ctx) => {
                         const subpodContent = pod.subpods.map(subpod =>
                             segment('image', { url: subpod.img.src })
                         );
-                        return pod.title+subpodContent;
+                        return pod.title + subpodContent;
                     }).join('\n');
-                    // console.log(output);
                     msg = output;
                 }
             ).catch(
                 (e) => {
-                    msg = `AlphaNoResultException!`;
+                    msg = 'AlphaNoResultException!';
                 }
             );
 
-            return msg; 
+            return msg;
         })
 
     ctx.command('unicode <code>')
