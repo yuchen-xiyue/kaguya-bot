@@ -4,7 +4,7 @@ module.exports = (ctx) => {
     const alphaId = 'VXUG2K-3HA2HTXKV9';
 
     ctx.command('alpha <query>')
-        // .option('debug', '-d [debug:boolean]')
+        .option('debug', '-d [debug:boolean]')
         .example('alpha sin(x)')
         .action(async (_, query, debug) => {
 
@@ -30,7 +30,7 @@ module.exports = (ctx) => {
                     const pods = qr.pods;
                     const output = pods.map((pod) => {
                         const subpodContent = pod.subpods.map(subpod =>
-                            segment('image', {url: subpod.img.src})
+                            segment('image', { url: subpod.img.src })
                         );
                         return pod.title + ':\n' + subpodContent + '\n';
                     });
