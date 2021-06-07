@@ -4,7 +4,7 @@ module.exports = (ctx) => {
     const alphaId = 'VXUG2K-3HA2HTXKV9';
 
     ctx.command('alpha <query:string>')
-        .option('debug', '-d [debug:boolean]')
+        .option('debug', '-d')
         .example('alpha sin(x)')
         .action(async (_, query, debug) => {
 
