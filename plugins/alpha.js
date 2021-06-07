@@ -1,11 +1,11 @@
 module.exports = (ctx) => {
     const WolframAlpha = require('wolfram-alpha-api');
-    const { segment } = require('koishi-utils')
+    const { segment } = require('koishi-utils');
     const alphaId = 'VXUG2K-3HA2HTXKV9';
 
     ctx.command('alpha <query>')
         .option('debug', '-d', { fallback: true })
-        .action((_, query, debug) => {
+        .action(async (_, query, debug) => {
 
             let msg = 'AlphaNoResponseException!';
 
@@ -15,7 +15,7 @@ module.exports = (ctx) => {
 
             if (debug) msg += 'Wolfram Alpha initiated...\n';
 
-            waApi.getFull(
+            await waApi.getFull(
                 query
             ).then(
                 (qr) => {
