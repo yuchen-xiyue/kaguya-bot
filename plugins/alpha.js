@@ -31,7 +31,7 @@ module.exports = (ctx) => {
                         const subpodContent = pod.subpods.map(subpod =>
                             segment('image', {url: subpod.img.src})
                         );
-                        return pod.title + subpodContent + '\n';
+                        return pod.title + ':\n' + subpodContent + '\n';
                     });
 
                     if (debug) {
