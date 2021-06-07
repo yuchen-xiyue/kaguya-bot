@@ -3,7 +3,7 @@ module.exports = (ctx) => {
     const {segment} = require('koishi-utils');
     const alphaId = 'VXUG2K-3HA2HTXKV9';
 
-    ctx.command('alpha <query>')
+    ctx.command('alpha <query:string>')
         .option('debug', '-d [debug:boolean]')
         .example('alpha sin(x)')
         .action(async (_, query, debug) => {
@@ -39,7 +39,8 @@ module.exports = (ctx) => {
                         msg += 'Query completed! Result: \n';
                         msg += output;
                     } else {
-                        msg = output;
+                        msg = '';
+                        msg += output;
                     }
 
                 }
@@ -48,7 +49,8 @@ module.exports = (ctx) => {
                     if (debug) {
                         msg += e;
                     } else {
-                        msg = 'AlphaNoResultException!';
+                        msg = '';
+                        msg += 'AlphaNoResultException!';
                     }
                 }
             );
