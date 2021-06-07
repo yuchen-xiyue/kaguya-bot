@@ -4,7 +4,7 @@ module.exports = (ctx) => {
     const alphaId = 'VXUG2K-3HA2HTXKV9';
 
     ctx.command('alpha <query>')
-        .option('debug', '-d [debug]', {fallback: false})
+        .option('debug', '-d [debug:boolean]', { fallback: false })
         .action(async (_, query, debug) => {
 
             let msg = 'AlphaNoResponseException!';
